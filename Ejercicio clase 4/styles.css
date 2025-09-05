@@ -1,0 +1,281 @@
+/* =========================
+   Variables CSS
+========================= */
+:root {
+  --color-principal: #005f99;
+  --color-secundario: #00bcd4;
+  --color-fondo: #f9f9f9;
+  --color-texto: #333;
+  --fuente: 'Arial', sans-serif;
+}
+
+/* =========================
+   Reset básico
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  line-height: 1.6;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* =========================
+   Header y Navegación
+========================= */
+header {
+  background: var(--color-principal);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* =========================
+   Hero
+========================= */
+.hero {
+  background: linear-gradient(to right, var(--color-principal), var(--color-secundario));
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--color-secundario);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #028ba3;
+}
+
+/* Imagen destacada en hero */
+.hero-image {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 80%;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   Info Cards (Inicio)
+========================= */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.info-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+}
+
+.info-card h3 {
+  color: var(--color-secundario);
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Página Nosotros
+========================= */
+.page-content {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.page-content ul {
+  margin: 1rem 0 1.5rem 2rem;
+}
+
+.page-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Video centrado */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.video-container video {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   Página Eventos/Tours
+========================= */
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tour-card h3 {
+  margin: 0.5rem 0;
+  color: var(--color-principal);
+}
+
+/* =========================
+   Formulario (Contacto)
+========================= */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 0.5rem 0 0.2rem;
+}
+
+form input,
+form textarea {
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.7rem;
+  background: var(--color-principal);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--color-secundario);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  background: var(--color-principal);
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 95%;
+  }
+
+  .video-container video {
+    width: 100%;
+  }
+}
+
+
+
